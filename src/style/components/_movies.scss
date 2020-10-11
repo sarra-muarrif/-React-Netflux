@@ -1,0 +1,60 @@
+.moviesGrid {
+    display: flex;
+    @include media("<=phone") {
+        flex-flow: row wrap;
+        justify-content: start;
+    }
+    @include media(">phone", "<desktop") {
+        flex-flow: row nowrap;
+        justify-content: start;
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+    @include media(">=desktop") {
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    li {
+        margin: .5rem;
+        max-width: 19rem;
+    }
+}
+.movie {
+    position: relative;
+    &:hover {
+        .movie-description {
+            opacity: 1;
+        }    
+    }
+    .movie-description {
+        opacity: 0;
+        transition: opacity .25s ease-in-out;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        text-align: left;
+        padding: $spacing-basic;
+        color: $white;
+        font-weight: bold;
+        background-color: rgba($black, 0.9);
+        .play-icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 3rem;
+            height: 100%;
+            background-color: $primary-color;
+            text-align: center;
+            &:hover {
+                i {
+                    color: $white;
+                }
+            }
+            i {
+                color: $black;
+                line-height: 3rem;
+            }
+        }
+    }
+}
