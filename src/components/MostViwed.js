@@ -6,10 +6,10 @@ class MostViwed extends React.Component {
   render() {
     return (
       <MovieGrid gridType="is-suggested" title="الأكثر مشاهدة">
-        <Movie title={this.props.movies[0].title} image={this.props.movies[0].poster} />
-        <Movie title={this.props.movies[1].title} image={this.props.movies[1].poster} />
-        <Movie title={this.props.movies[2].title} image={this.props.movies[2].poster} />
-        <Movie title={this.props.movies[3].title} image={this.props.movies[3].poster} />
+        <Movie title={this.props.movies[4].originalTitle} image={this.props.movies[4].posterPath} />
+        <Movie title={this.props.movies[5].originalTitle} image={this.props.movies[5].posterPath} />
+        <Movie title={this.props.movies[6].originalTitle} image={this.props.movies[6].posterPath} />
+        <Movie title={this.props.movies[7].originalTitle} image={this.props.movies[7].posterPath} />
       </MovieGrid>
     );
   }
