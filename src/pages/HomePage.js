@@ -12,19 +12,24 @@ import image2 from '../img/movie2.svg'
 import image3 from '../img/movie3.svg'
 import image4 from '../img/movie4.svg'
 
-const posterImages = [image1, image2, image3, image4]
-
-
 class HomePage extends React.Component {
+    state = {
+        movies: [
+            { title: 'The Maze Runner', poster: image1 },
+            { title: 'Breaking Bad', poster: image2 },
+            { title: 'Peaky Blinders', poster: image3 },
+            { title: 'The Good Doctors', poster: image4 }
+        ]
+    }
     render() {
         return (
             <>
                 <Header />
                 <Hero />
-                <MovieSuggestions images={posterImages} />
-                <MostViwed images={posterImages} />
-                <NewShows images={posterImages} />
-                <NewMovies images={posterImages} />
+                <MovieSuggestions movies={this.state.movies} />
+                <MostViwed movies={this.state.movies} />
+                <NewShows movies={this.state.movies} />
+                <NewMovies movies={this.state.movies} />
                 <Footer />
             </>
         )
