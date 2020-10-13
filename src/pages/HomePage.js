@@ -7,11 +7,6 @@ import NewShows from '../components/NewShows';
 import NewMovies from '../components/NewMovies';
 import Footer from '../components/Footer'
 
-import image1 from '../img/movie1.svg'
-import image2 from '../img/movie2.svg'
-import image3 from '../img/movie3.svg'
-import image4 from '../img/movie4.svg'
-
 import data from '../data/movies.json'
 
 class HomePage extends React.Component {
