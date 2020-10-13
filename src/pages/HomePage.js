@@ -12,16 +12,14 @@ import image2 from '../img/movie2.svg'
 import image3 from '../img/movie3.svg'
 import image4 from '../img/movie4.svg'
 
+import data from '../data/movies.json'
+
 class HomePage extends React.Component {
     state = {
-        movies: [
-            { title: 'The Maze Runner', poster: image1 },
-            { title: 'Breaking Bad', poster: image2 },
-            { title: 'Peaky Blinders', poster: image3 },
-            { title: 'The Good Doctors', poster: image4 }
-        ]
+        movies: data
     }
     render() {
+        console.log(data)
         return (
             <>
                 <Header />

@@ -5,7 +5,7 @@ class Movie extends React.Component {
         return (
             <li className='movie'>
                 <a href='#'>
-                    <img src={this.props.image} alt='movie cover' />
+                    <img src={`https://image.tmdb.org/t/p/w300${this.props.image}`} alt='movie cover' />
                     <span className='movie-description'>{this.props.title}
                         <span className='play-icon'>
                             <i className='fas fa-play'></i>
