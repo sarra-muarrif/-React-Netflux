@@ -1,14 +1,14 @@
 import React from 'react'
 
-import Hero from '../components/Hero'
+import Filter from '../components/Filter'
 import MovieGrid from '../components/MovieGrid'
-import { suggestions, recentRelease, mostViwed } from '../utils/helper'
+import { suggestions, mostViwed, recentRelease } from '../utils/helper'
 
-class HomePage extends React.Component {
+class MoviesPage extends React.Component {
     render() {
         return (
             <>
-                <Hero />
+                <Filter filterType='فلم' filterName='نوع الفلم'/>
                 <MovieGrid
                     gridType="is-suggested"
                     title="اقتراحنا لك"
@@ -24,18 +24,10 @@ class HomePage extends React.Component {
                     gridType="is-newMovies"
                     title="أحدث الأفلام "
                     movies={recentRelease(this.props.movies, 'Film')}
-                    Limit={8} />
-                <MovieGrid
-                    gridType="is-newShows"
-                    title="أحدث المسلسلات "
-                    movies={recentRelease(this.props.movies, 'Film')}
-                    Limit={8}
-                />
+                    Limit={32} />
             </>
         )
     }
-
-
 }
 
-export default HomePage;
+export default MoviesPage;
