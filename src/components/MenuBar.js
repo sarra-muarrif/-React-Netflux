@@ -8,10 +8,10 @@ const MenuBar = () => {
                 <NavLink exact to='/' className='navbar-item active'>الرئيسة</NavLink>
             </li>
             <li >
-                <NavLink exact to='./shows' className='navbar-item '>أفلام</NavLink>
+                <NavLink exact to='/shows' className='navbar-item '>أفلام</NavLink>
             </li>
             <li >
-                <NavLink exact to='./movies' className='navbar-item '>مسلسلات</NavLink>
+                <NavLink exact to='/movies' className='navbar-item '>مسلسلات</NavLink>
             </li>
         </ul>
     )

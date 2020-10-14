@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
 import MoviesPage from './pages/MoviesPage'
 import ShowsPage from './pages/ShowsPage'
+import DetailsPage from './pages/DetailsPage'
 
 import data from './data/movies.json'
 
@@ -27,7 +28,7 @@ class App extends React.Component {
               }} />
               <Route exact path='/movies' render={props => {
                 return (
-                  <MoviesPage movies={this.state.movies}/>
+                  <MoviesPage movies={this.state.movies} />
                 );
               }} />
               <Route exact path='/shows' render={props => {
@@ -35,6 +36,10 @@ class App extends React.Component {
                   <ShowsPage movies={this.state.movies} />
                 );
               }} />
+              <Route exact path='/details/:id' render={(props) =>
+                (<DetailsPage {...props}
+                 movies={this.state.movies} />)}
+              />
             </>
             <Footer />
           </div>
