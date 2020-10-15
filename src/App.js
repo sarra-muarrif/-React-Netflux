@@ -4,8 +4,7 @@ import { Route, BrowserRouter } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
-import MoviesPage from './pages/MoviesPage'
-import ShowsPage from './pages/ShowsPage'
+import CategoryPage from './pages/CategoryPage'
 import DetailsPage from './pages/DetailsPage'
 
 import data from './data/movies.json'
@@ -28,17 +27,25 @@ class App extends React.Component {
               }} />
               <Route exact path='/movies' render={props => {
                 return (
-                  <MoviesPage movies={this.state.movies} />
+                  <CategoryPage {...props}
+                    type="Film"
+                    typeText="أفلام"
+                    optionText="نوع الفلم"
+                    movies={this.state.movies} />
                 );
               }} />
               <Route exact path='/shows' render={props => {
                 return (
-                  <ShowsPage movies={this.state.movies} />
+                  <CategoryPage {...props}
+                    type="Shows"
+                    typeText="المسلسلات"
+                    optionText="نوع المسلسل"
+                    movies={this.state.movies} />
                 );
               }} />
               <Route exact path='/details/:id' render={(props) =>
                 (<DetailsPage {...props}
-                 movies={this.state.movies} />)}
+                  movies={this.state.movies} />)}
               />
             </>
             <Footer />

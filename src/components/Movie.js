@@ -6,7 +6,7 @@ class Movie extends React.Component {
         return (
             <li className='movie'>
                 <a href={`/details${trimExtention(this.props.movie.posterPath)}`}>
-                    <img src={`https://image.tmdb.org/t/p/w300${this.props.movie.posterPath}`} alt={this.props.movie.originalTitle} />
+                    <img src={`https://image.tmdb.org/t/p/w500${this.props.movie.posterPath}`} alt={this.props.movie.originalTitle} height="400" />
                     <span className='movie-description'>{this.props.movie.originalTitle}
                         <span className='play-icon'>
                             <i className='fas fa-play'></i>
