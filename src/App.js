@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
 import CategoryPage from './pages/CategoryPage'
 import DetailsPage from './pages/DetailsPage'
+import SearchPage from './pages/SearchPage'
 
 import data from './data/movies.json'
 
@@ -45,6 +46,10 @@ class App extends React.Component {
               }} />
               <Route exact path='/details/:id' render={(props) =>
                 (<DetailsPage {...props}
+                  movies={this.state.movies} />)}
+              />
+              <Route exact path='/search/:keyword' render={(props) =>
+                (<SearchPage {...props}
                   movies={this.state.movies} />)}
               />
             </>
