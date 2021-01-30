@@ -1,7 +1,6 @@
 ## Netflux
 
-![homepage](./src/img/homepage.png )
-<img src="./src/img/homepage.png" width="48">
+<img src="./src/img/homepage.png" width="100">
 
 ## Description
 
