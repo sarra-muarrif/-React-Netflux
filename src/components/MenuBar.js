@@ -5,7 +5,7 @@ const MenuBar = () => {
     return (
         <ul className='navbar-menu'>
             <li >
-                <NavLink exact to='/' className='navbar-item active'>الرئيسة</NavLink>
+                <NavLink exact to='/' className='navbar-item '>الرئيسة</NavLink>
             </li>
             <li >
                 <NavLink exact to='/movies' className='navbar-item '>أفلام</NavLink>
