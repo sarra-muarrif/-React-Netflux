@@ -1,6 +1,6 @@
 ## Netflux
 
-![homepage](./src/img/homepage.png)
+![homepage](./src/img/homepage.png | width=100)
 
 ## Description
 
